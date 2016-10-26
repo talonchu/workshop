@@ -33,5 +33,22 @@ public class GetUrl extends WCMUse	 {
 		}
 		return map;
 	}
+	
+	public Map<String, String> getNavigate() {
+		Map<String, String> map = new HashMap<String, String>();
+
+		String[] strs = getProperties().get("url", new String[] {});
+
+		for (String str : strs) {
+			try {
+				JSONObject obj = new JSONObject(str);
+				map.put(obj.getString("term"), obj.getString("definition"));
+			} catch (JSONException e) {
+				log.log(Level.INFO, e.getMessage());
+				e.printStackTrace();
+			}
+		}
+		return map;
+	}
 
 }
