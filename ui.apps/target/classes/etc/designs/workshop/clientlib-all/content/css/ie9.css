@@ -1,0 +1,10 @@
+.ie01,
+.ie02 {
+  display: inline-block; }
+
+.hero .hero-client .multiple {
+  display: block;
+  background-image: none;
+  background-color: red; }
+
+/*# sourceMappingURL=ie9.css.map */

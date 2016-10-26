@@ -1,0 +1,6 @@
+com\perficient\workshop\talon\core\data\GetUrl.class
+com\perficient\workshop\talon\core\listeners\SimpleResourceListener.class
+com\perficient\workshop\talon\core\schedulers\SimpleScheduledTask.class
+com\perficient\workshop\talon\core\filters\LoggingFilter.class
+com\perficient\workshop\talon\core\package-info.class
+com\perficient\workshop\talon\core\servlets\SimpleServlet.class
