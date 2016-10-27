@@ -50,7 +50,7 @@
             </tab1>
             <tab2
                 jcr:primaryType="cq:Panel"
-                title="Tab 2">
+                title="Mega Menu">
                 <items jcr:primaryType="cq:WidgetCollection">
                     <definitions
                         jcr:primaryType="cq:Widget"
@@ -64,12 +64,14 @@
                             <items jcr:primaryType="cq:WidgetCollection">
                                 <term
                                     jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
                                     fieldLabel="Label"
                                     key="term"
                                     width="250"
                                     xtype="pathfield"/>
                                 <link
                                     jcr:primaryType="cq:Widget"
+                                    allowBlank="{Boolean}false"
                                     fieldLabel="Link"
                                     key="definition"
                                     width="250"

@@ -45,54 +45,33 @@
 								</li>
 								<!-- BEGIN MAIN NAVIGATION -->
 
+								<sly data-sly-use.data="${'com.perficient.workshop.talon.core.data.GetUrl'}" />
 								
-								<li class="nav-item "><a href="/insights"
-									class="nav-link dropdown-toggle" id="servicesMenu"
-									data-toggle="dropdown" aria-haspopup="true"
-									aria-expanded="false"> Insights </a>
-
-									<div class="dropdown-menu mega-menu"
-										aria-labelledby="servicesMenu">
-										<div class="menu-title">
-											<a href="/insights">Insights</a>
-										</div>
-										<div class="menu-block">
-											<ul class="list-unstyled">
-												<li class="mega-menu-item"><a href="/insights/blogs">Blogs</a></li>
-												<li class="mega-menu-item"><a href="/insights/events">Events</a></li>
-												<li class="mega-menu-item"><a href="/insights/guides">Guides</a></li>
-												<li class="mega-menu-item"><a href="/insights/webinars">Webinars</a></li>
-											</ul>
-										</div>
-									</div></li>
-								
-								<dl data-sly-list.navigate="${data.navigate}" data-sly-unwrap="true">
+								<dl data-sly-list.nav="${data.navigate}" data-sly-unwrap="true">
 								   		<li class="nav-item">
-								   		<a href="${data.navigate[navigate]}.html"
+								   			<a href="${data.navigate[nav]}.html"
 												class="nav-link dropdown-toggle" id="servicesMenu"
 												data-toggle="dropdown" aria-haspopup="true"
-												aria-expanded="false"> ${navigate} </a>
+												aria-expanded="false"> ${nav} </a>
 											<div class="dropdown-menu mega-menu"
 												aria-labelledby="servicesMenu">
 												<div class="menu-title">
-													<a href="${data.navigate[navigate]}.html">${navigate}</a>
+													<a href="${data.navigate[nav]}.html">${nav}</a>
 												</div>
 												<div class="menu-block">
-													<div data-sly-call="${header_nav @url=data.navigate[navigate] }" data-sly-unwrap="true">
+													<div data-sly-call="${header_nav @url=data.navigate[nav] }" data-sly-unwrap="true">
 													</div>
 												</div>
 											</div>
-										</li>>
-								    </dl>>
+										</li>
+								 </dl>
 								
- 
-								
-								<!-- END MAIN NAVIGATION -->
+ 											<!-- END MAIN NAVIGATION -->
 							</ul>
 						</div>
 						<!-- BEGIN UTILITY NAVIGATION -->
+						
 						<div class="pull-right utility-nav">
-							<sly data-sly-use.data="${'com.perficient.workshop.talon.core.data.GetUrl'}" />
 
 							<ul data-sly-list.item="${data.vanityPaths}">
 								<li><a href="${data.vanityPaths[item]}">${item}</a></li>

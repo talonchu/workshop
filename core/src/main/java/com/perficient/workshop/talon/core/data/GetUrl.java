@@ -1,6 +1,6 @@
 package com.perficient.workshop.talon.core.data;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,7 +18,7 @@ public class GetUrl extends WCMUse	 {
 	}
 
 	public Map<String, String> getVanityPaths() {
-		Map<String, String> map = new HashMap<String, String>();
+		LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
 
 		String[] strs = getProperties().get("definitions", new String[] {});
 
@@ -35,7 +35,7 @@ public class GetUrl extends WCMUse	 {
 	}
 	
 	public Map<String, String> getNavigate() {
-		Map<String, String> map = new HashMap<String, String>();
+		LinkedHashMap<String, String> map = new LinkedHashMap<String, String>();
 
 		String[] strs = getProperties().get("url", new String[] {});
 
